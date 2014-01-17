@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/command_name_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:inputType="text|textNoSuggestions"
+        android:maxLines="1"
+		android:hint="@string/new_shortcut_command_name_hint"
+		android:maxLength="10" />
+    
+    <EditText
+        android:id="@+id/command_description_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:inputType="text|textNoSuggestions"
+        android:maxLines="1"
+		android:hint="@string/new_shortcut_description_hint"
+		android:maxLength="10" />
+    
+    <Spinner
+	    android:id="@+id/command_type_spinner"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" />
+    
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:tools="http://schemas.android.com/tools"
+	    android:id="@+id/new_shortcut_frame"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    tools:context=".EditShortcutFragment" >
+
+	</FrameLayout>
+
+</LinearLayout>

@@ -5,6 +5,8 @@ import com.figura4.lazysysadmin.adapters.DrawerAdapter;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.res.Configuration;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
@@ -23,10 +25,12 @@ public class MainActivity extends Activity {
 
     private CharSequence mDrawerTitle;
     private CharSequence mTitle;
-    private String[] mMenuTitles = {"Dixie Flatline", "Henry Dorsett Case", "Settings", "New Shortcut"};
-    private String[] mMenuSubTitles = {"Dead construct", "Disgraced cowboy", "Tune app settings", "Create a new command shortcut"};
-    private String[] mMenuIcons = {"ic_launcher", "ic_launcher", "ic_action_settings", "ic_action_new"};
+    private String[] mMenuTitles = {"Dixie Flatline", "Henry Dorsett Case", "New Shortcut", "Settings"};
+    private String[] mMenuSubTitles = {"Dead construct", "Disgraced cowboy", "Create a new command shortcut", "Tune app settings"};
+    private String[] mMenuIcons = {"ic_launcher", "ic_launcher", "ic_action_new", "ic_action_settings"};
 
+    public final static String EXTRA_MESSAGE = "com.figura4.lazysysadmin.MESSAGE";
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -130,7 +134,28 @@ public class MainActivity extends Activity {
     }
 
     private void selectItem(int position) {
-        // update the main content
+    	// update the main content by replacing fragments
+    	Fragment fragment;
+    	Bundle args = new Bundle();
+    	
+    	switch(position) {
+    	case 2:
+    		fragment = new EditShortcutFragment();
+    		args.putInt(EditShortcutFragment.ARG_SHORTCUT_NUMBER, position);
+    		break;
+    	case 3:
+    		fragment = new SettingsFragment();
+    		args.putInt(SettingsFragment.ARG_SHORTCUT_NUMBER, position);
+    		break;
+    		
+    	default:
+    		fragment = new ExecuteFragment();
+    	}
+        
+        fragment.setArguments(args);
+
+        FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
 
         // update selected item and title, then close the drawer
         mDrawerList.setItemChecked(position, true);
