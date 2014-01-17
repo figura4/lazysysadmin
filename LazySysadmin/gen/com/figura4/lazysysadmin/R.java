@@ -36,13 +36,15 @@ public final class R {
         public static final int ic_launcher=0x7f020008;
     }
     public static final class id {
-        public static final int action_discard_shortcut=0x7f090005;
-        public static final int action_edit_shortcut=0x7f090006;
+        public static final int action_discard_shortcut=0x7f090007;
+        public static final int action_edit_shortcut=0x7f090008;
         public static final int drawer_layout=0x7f090000;
-        public static final int firstLine=0x7f090004;
-        public static final int icon=0x7f090002;
-        public static final int left_drawer=0x7f090001;
-        public static final int secondLine=0x7f090003;
+        public static final int edit_console=0x7f090001;
+        public static final int firstLine=0x7f090006;
+        public static final int icon=0x7f090004;
+        public static final int left_drawer=0x7f090003;
+        public static final int main_execute_button=0x7f090002;
+        public static final int secondLine=0x7f090005;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -82,7 +84,9 @@ public final class R {
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         
-
+         */
+        public static final int AppBaseLazyTheme=0x7f070000;
+        /** 
         Base application theme for API 11+. This theme completely replaces
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
     
@@ -94,10 +98,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f070002;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
+        public static final int LazyTheme=0x7f070001;
     }
 }
