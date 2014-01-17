@@ -41,8 +41,10 @@ public final class R {
         public static final int ic_launcher=0x7f02000a;
     }
     public static final class id {
-        public static final int action_discard_shortcut=0x7f0b000e;
-        public static final int action_edit_shortcut=0x7f0b000f;
+        public static final int action_accept=0x7f0b000f;
+        public static final int action_cancel=0x7f0b000e;
+        public static final int action_discard_shortcut=0x7f0b0010;
+        public static final int action_edit_shortcut=0x7f0b0011;
         public static final int command_description_text=0x7f0b0007;
         public static final int command_name_text=0x7f0b0006;
         public static final int command_type_spinner=0x7f0b0008;
@@ -67,9 +69,12 @@ public final class R {
         public static final int fragment_wol=0x7f030005;
     }
     public static final class menu {
-        public static final int main=0x7f0a0000;
+        public static final int edit_shortcut=0x7f0a0000;
+        public static final int main=0x7f0a0001;
     }
     public static final class string {
+        public static final int action_accept_edit_shortcut=0x7f080005;
+        public static final int action_cancel_edit_shortcut=0x7f080006;
         public static final int action_discard_shortcut=0x7f080003;
         public static final int action_edit_shortcut=0x7f080004;
         public static final int action_new_shortcut=0x7f080002;
@@ -77,23 +82,24 @@ public final class R {
          */
         public static final int action_settings=0x7f080001;
         public static final int app_name=0x7f080000;
-        public static final int drawer_close=0x7f08000b;
+        public static final int drawer_close=0x7f08000d;
         /**  Drawer 
          */
-        public static final int drawer_first_line_default=0x7f080007;
-        public static final int drawer_icon_description_default=0x7f080009;
-        public static final int drawer_open=0x7f08000a;
-        public static final int drawer_second_line_default=0x7f080008;
-        public static final int drawer_subtitle=0x7f08000c;
-        public static final int main_edit_console=0x7f080006;
+        public static final int drawer_first_line_default=0x7f080009;
+        public static final int drawer_icon_description_default=0x7f08000b;
+        public static final int drawer_open=0x7f08000c;
+        public static final int drawer_second_line_default=0x7f08000a;
+        public static final int drawer_subtitle=0x7f08000e;
+        public static final int main_edit_console=0x7f080008;
         /**  Main activity 
          */
-        public static final int main_execute_button=0x7f080005;
+        public static final int main_execute_button=0x7f080007;
         /**  Fragment New shortcut 
          */
-        public static final int new_shortcut_command_name_hint=0x7f08000e;
-        public static final int new_shortcut_description_hint=0x7f08000f;
-        public static final int title_activity_new_shortcut=0x7f08000d;
+        public static final int new_shortcut_command_name_hint=0x7f080011;
+        public static final int new_shortcut_description_hint=0x7f080012;
+        public static final int title_activity_edit_shortcut=0x7f080010;
+        public static final int title_activity_new_shortcut=0x7f08000f;
     }
     public static final class style {
         /** 

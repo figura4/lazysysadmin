@@ -22,7 +22,6 @@ public class ExecuteFragment extends Fragment {
         
         // TODO fetch titles from db
         String [] mMenuTitles = {"Dixie Flatline", "Henry Dorsett Case", "Settings", "New Shortcut"};
-
         getActivity().setTitle(mMenuTitles[i]);
         return rootView;
     }

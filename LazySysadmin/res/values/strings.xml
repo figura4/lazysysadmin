@@ -8,6 +8,8 @@
     <string name="action_new_shortcut">New shortcut</string>
     <string name="action_discard_shortcut">Discard shortcut</string>
     <string name="action_edit_shortcut">Edit shortcut</string>
+    <string name="action_accept_edit_shortcut">Accept</string>
+    <string name="action_cancel_edit_shortcut">Cancel</string>
 
     <!-- Main activity -->
     <string name="main_execute_button">Execute</string>
@@ -21,6 +23,7 @@
     <string name="drawer_close">Lazy sysadmin</string>
     <string name="drawer_subtitle">Pick your shortcut</string>
     <string name="title_activity_new_shortcut">NewShortcutActivity</string>
+    <string name="title_activity_edit_shortcut">EditShortcutActivity</string>
     
     <!-- Fragment New shortcut -->
     <string name="new_shortcut_command_name_hint">Command name:</string>

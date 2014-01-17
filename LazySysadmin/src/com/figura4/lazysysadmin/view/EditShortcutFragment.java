@@ -31,7 +31,6 @@ public class EditShortcutFragment extends Fragment implements OnItemSelectedList
 
         getActivity().setTitle(mMenuTitles[i]);
         
-        
         // Setting up command type spinner
         Spinner spinner = (Spinner) rootView.findViewById(R.id.command_type_spinner);
 	    // Create an ArrayAdapter using the string array and a default spinner layout

@@ -150,6 +150,7 @@ public class MainActivity extends Activity {
     		
     	default:
     		fragment = new ExecuteFragment();
+    		args.putInt(ExecuteFragment.ARG_SHORTCUT_NUMBER, position);
     	}
         
         fragment.setArguments(args);
