@@ -22,7 +22,6 @@ public class MainActivity extends Activity {
     private ActionBarDrawerToggle mDrawerToggle;
 
     private CharSequence mDrawerTitle;
-    private CharSequence mDrawerSubTitle;
     private CharSequence mTitle;
     private String[] mMenuTitles = {"Dixie Flatline", "Henry Dorsett Case", "Settings", "New Shortcut"};
     private String[] mMenuSubTitles = {"Dead construct", "Disgraced cowboy", "Tune app settings", "Create a new command shortcut"};
@@ -35,7 +34,6 @@ public class MainActivity extends Activity {
 
         mTitle = getTitle();
         mDrawerTitle = getResources().getString(R.string.app_name);
-        mDrawerSubTitle = getResources().getString(R.string.drawer_subtitle);
         
         // TODO load drawer items from db
         
@@ -63,14 +61,12 @@ public class MainActivity extends Activity {
                 R.string.drawer_close  /* "close drawer" description for accessibility */
                 ) {
             public void onDrawerClosed(View view) {
-                getActionBar().setTitle(view.getResources().getString(R.string.drawer_close));
-                getActionBar().setSubtitle(mTitle);
+                getActionBar().setTitle(mTitle);
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
 
             public void onDrawerOpened(View drawerView) {
                 getActionBar().setTitle(mDrawerTitle);
-                getActionBar().setSubtitle(mDrawerSubTitle);
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
         };
@@ -125,7 +121,7 @@ public class MainActivity extends Activity {
         }
     }
 
-    /* The click listner for ListView in the navigation drawer */
+    /* The click listener for ListView in the navigation drawer */
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
